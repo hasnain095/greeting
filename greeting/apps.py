@@ -38,7 +38,7 @@ class GreetingConfig(AppConfig):
 
                 # The regex to provide to django's urls.url.
                 # Optional; Defaults to r''.
-                PluginURLs.REGEX: r'',
+                PluginURLs.REGEX: r'^api/greeting/v1/',
 
                 # The python path (relative to this app) to the URLs module to be plugged into the project.
                 # Optional; Defaults to 'urls'.
