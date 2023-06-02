@@ -8,11 +8,6 @@ import sys
 
 from setuptools import find_packages, setup
 
-setup(
-    ...
-    
-)
-
 
 def get_version(*file_paths):
     """
