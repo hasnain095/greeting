@@ -3,6 +3,9 @@ greeting Django application initialization.
 """
 
 from django.apps import AppConfig
+from edx_django_utils.plugins.constants import (
+    PluginURLs, PluginSettings, PluginContexts
+)
 
 
 class GreetingConfig(AppConfig):
@@ -11,6 +14,8 @@ class GreetingConfig(AppConfig):
     """
 
     name = 'greeting'
+    label = "greeting"
+    verbose_name = "Greeting"
 
         # Class attribute that configures and enables this app as a Plugin App.
     plugin_app = {
