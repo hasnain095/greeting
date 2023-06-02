@@ -131,7 +131,7 @@ setup(
     ],
     entry_points={
         "lms.djangoapp": [
-            "greeting = lgreeting.apps:GreetingConfig",
+            "greeting = greeting.greeting.apps:GreetingConfig",
         ],
         "cms.djangoapp": [
         ],
