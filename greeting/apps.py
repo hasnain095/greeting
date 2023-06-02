@@ -85,7 +85,7 @@ class GreetingConfig(AppConfig):
                     PluginSignals.RECEIVER_FUNC_NAME: 'my_callback',
 
                     # The full path to the module where the signal is defined.
-                    PluginSignals.SIGNAL_PATH: 'greeting.greeting.signals',
+                    PluginSignals.SIGNAL_PATH: 'greeting.signals',
 
                     # The value for dispatch_uid to pass to Signal.connect to prevent duplicate signals.
                     # Optional; Defaults to full path to the signal's receiver function.
