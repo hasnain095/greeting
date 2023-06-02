@@ -60,24 +60,12 @@ class GreetingConfig(AppConfig):
 
                     # The python path (relative to this app) to the settings module for the relevant Project Type and Settings Type.
                     # Optional; Defaults to 'settings'.
-                    PluginSettings.RELATIVE_PATH: '..settings.production',
+                    PluginSettings.RELATIVE_PATH: 'settings.production',
                 },
                 'common': {
-                    PluginSettings.RELATIVE_PATH: '..settings.common',
+                    PluginSettings.RELATIVE_PATH: 'settings.common',
                 },
             }
         },
 
-        # Configuration setting for Plugin Contexts for this app.
-        PluginContexts.CONFIG: {
-
-            # Configure the Plugin Signals for each Project Type, as needed.
-            'lms.djangoapp': {
-
-                # Key is the view that the app wishes to add context to and the value
-                # is the function within the app that will return additional context
-                # when called with the original context
-                'course_dashboard': 'greeting.views.greeting'
-            }
-        }
     }
