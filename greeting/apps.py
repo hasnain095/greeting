@@ -30,11 +30,11 @@ class GreetingConfig(AppConfig):
             'lms.djangoapp': {
 
                 # The namespace to provide to django's urls.include.
-                PluginURLs.NAMESPACE: 'greeting',
+                PluginURLs.NAMESPACE: '',
 
                 # The application namespace to provide to django's urls.include.
                 # Optional; Defaults to None.
-                PluginURLs.APP_NAME: 'greeting',
+                PluginURLs.APP_NAME: None,
 
                 # The regex to provide to django's urls.url.
                 # Optional; Defaults to r''.
