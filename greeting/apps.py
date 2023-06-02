@@ -4,7 +4,7 @@ greeting Django application initialization.
 
 from django.apps import AppConfig
 from edx_django_utils.plugins.constants import (
-    PluginURLs, PluginSettings, PluginContexts, PluginSignals
+    PluginURLs, PluginSettings, PluginContexts
 )
 
 
@@ -65,36 +65,6 @@ class GreetingConfig(AppConfig):
                 'common': {
                     PluginSettings.RELATIVE_PATH: '..settings.common',
                 },
-            }
-        },
-
-        # Configuration setting for Plugin Signals for this app.
-        PluginSignals.CONFIG: {
-
-            # Configure the Plugin Signals for each Project Type, as needed.
-            'lms.djangoapp': {
-
-                # The python path (relative to this app) to the Signals module containing this app's Signal receivers.
-                # Optional; Defaults to 'signals'.
-                PluginSignals.RELATIVE_PATH: 'signals',
-
-                # List of all plugin Signal receivers for this app and project type.
-                PluginSignals.RECEIVERS: [{
-
-                    # The name of the app's signal receiver function.
-                    PluginSignals.RECEIVER_FUNC_NAME: 'my_callback',
-
-                    # The full path to the module where the signal is defined.
-                    PluginSignals.SIGNAL_PATH: 'greeting.signals',
-
-                    # The value for dispatch_uid to pass to Signal.connect to prevent duplicate signals.
-                    # Optional; Defaults to full path to the signal's receiver function.
-                    PluginSignals.DISPATCH_UID: 'greeting.signals.my_callback',
-
-                    # The full path to a sender (if connecting to a specific sender) to be passed to Signal.connect.
-                    # Optional; Defaults to None.
-                    PluginSignals.SENDER_PATH: None,
-                }],
             }
         },
 
