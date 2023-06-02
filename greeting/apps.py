@@ -60,12 +60,13 @@ class GreetingConfig(AppConfig):
 
                     # The python path (relative to this app) to the settings module for the relevant Project Type and Settings Type.
                     # Optional; Defaults to 'settings'.
-                    PluginSettings.RELATIVE_PATH: 'settings.production',
+                    PluginSettings.RELATIVE_PATH: '..settings.production',
                 },
                 'common': {
-                    PluginSettings.RELATIVE_PATH: 'settings.common',
+                    PluginSettings.RELATIVE_PATH: '..settings.common',
                 },
             }
         },
 
+   
     }
