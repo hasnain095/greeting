@@ -22,7 +22,7 @@ class GreetingConfig(AppConfig):
     plugin_app = {
         PluginURLs.CONFIG: {
             ProjectType.LMS: {
-                PluginURLs.NAMESPACE: '',
+                PluginURLs.NAMESPACE: None,
                 PluginURLs.REGEX: '^api/greeting/',
                 PluginURLs.RELATIVE_PATH: 'urls',
             }
