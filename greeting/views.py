@@ -2,8 +2,9 @@ from django.http import JsonResponse
 
 
 def greeting(request):
-    if request.data == "hello":
-    	pass
-    else:
-    	return JsonResponse({"greeting" : "hello"})
-    return JsonResponse(data)
+    return JsonResponse({"greeting" : "hello"})
+    # if request.data == "hello":
+    # 	pass
+    # else:
+    # 	return JsonResponse({"greeting" : "hello"})
+    # return JsonResponse(data)
