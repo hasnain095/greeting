@@ -8,6 +8,6 @@ from .views import greeting, greeting_new
 
 urlpatterns = [
     # re_path(r'', TemplateView.as_view(template_name="greeting/base.html")),
-    url(r'^v1/greeting/$', greeting, name='greeting'),
-    url(r'^v1/greeting_new/$', greeting_new, name='greeting_new'),
+    url(r'^y1/hello/$', greeting, name='hello'),
+    url(r'^y1/hello_new/$', greeting_new, name='hello_new'),
 ]
