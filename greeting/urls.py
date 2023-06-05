@@ -8,5 +8,5 @@ from .views import greeting
 
 urlpatterns = [
     # re_path(r'', TemplateView.as_view(template_name="greeting/base.html")),
-    re_path(r'^v1/greeting/$', greeting, name='greeting'),
+    re_path(r'^v1/greeting', greeting, name='greeting'),
 ]
