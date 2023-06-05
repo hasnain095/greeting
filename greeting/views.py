@@ -1,10 +1,13 @@
 import json
 
 from django.http import JsonResponse
+from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 from django.views import View
 
 from oauth2_provider.decorators import protected_resource
+
+from .oauth import oauth
 
 
 @require_http_methods(["POST"])
