@@ -3,9 +3,7 @@ greeting Django application initialization.
 """
 
 from django.apps import AppConfig
-from edx_django_utils.plugins.constants import (
-    PluginURLs, PluginSettings
-)
+from edx_django_utils.plugins import PluginSettings, PluginURLs
 from openedx.core.djangoapps.plugins.constants import ProjectType, SettingsType
 
 
@@ -22,7 +20,7 @@ class GreetingConfig(AppConfig):
     plugin_app = {
         PluginURLs.CONFIG: {
             ProjectType.LMS: {
-                PluginURLs.NAMESPACE: None,
+                PluginURLs.NAMESPACE: '',
                 PluginURLs.REGEX: '^api/greeting/',
                 PluginURLs.RELATIVE_PATH: 'urls',
             }
