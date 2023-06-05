@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from djago.views import View
+from django.views import View
 
 
 class Greeting(View):
